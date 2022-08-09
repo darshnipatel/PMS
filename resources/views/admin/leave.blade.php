@@ -102,7 +102,7 @@
       </div>
     </div>
     <script>
-       $('.create_csv').click(function(){
+       $('#create_csv').click(function(){
           var from_date = $('#from_date').val();
           var to_date = $('#to_date').val();
           var employee_id = $('#employee').val();
@@ -112,6 +112,7 @@
             dataType: 'json',
             data:{from_date: from_date,to_date:to_date, employee_id: employee_id, _token:"{{ csrf_token() }}"},
             success: function (data) {
+              alert(1);
             }
           });
        });
