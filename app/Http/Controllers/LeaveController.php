@@ -88,7 +88,7 @@ class LeaveController extends Controller
     }
     public function create_csv()
     {
-            //$leave = Leave::where('employee_id',$_REQUEST['employee_id'])->whereBet;
+            $leave = Leave::where('employee_id',$_REQUEST['employee_id'])->whereBet;
             $leave->status = $_REQUEST['status'];
             $leave->save();
             session()->flash('msg', 'Leave Status updated');
