@@ -20,7 +20,8 @@ class Project extends Model
         'technology',
         'priority',
         'attached_files',
-        'description'
+        'description',
+        'status'
     ];
     public function employee()
     {

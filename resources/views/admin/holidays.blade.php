@@ -19,9 +19,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
           <div class="defult-boxwrap">
-
             <div class="pms-login-from-wrapper-admin">
             @if ($errors->any())
               <div class="alert alert-danger">

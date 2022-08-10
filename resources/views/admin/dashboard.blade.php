@@ -35,7 +35,7 @@
             <h3 class="pms-cardtitle">Projects</h3>
               <div class="wrap-titles">
                   <div class="total-task">
-                     <h4>2</h4>
+                     <h4>{{ $project_count }}</h4>
                      <label>Total Projects</label>
                   </div>
                   <div class="panding-task total-task">
@@ -48,7 +48,7 @@
             <h3 class="pms-cardtitle">Clients</h3>
               <div class="wrap-titles">
                   <div class="total-task">
-                     <h4>2</h4>
+                     <h4>{{ $clients_count }}</h4>
                      <label>Total Clients</label>
                   </div>
               </div>
@@ -57,7 +57,7 @@
             <h3 class="pms-cardtitle">Employees</h3>
               <div class="wrap-titles">
                   <div class="total-task">
-                     <h4>10</h4>
+                     <h4>{{ $employees_count }}</h4>
                   </div>
               </div>
           </div>          

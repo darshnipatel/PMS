@@ -22,10 +22,11 @@ return new class extends Migration
             $table->Integer('rate');
             $table->string('type')->nullable();;
             $table->Integer('employee_id');
-            $table->string('technology')->nullable();;
-            $table->string('priority')->nullable();;
-            $table->text('attached_files')->nullable();;
-            $table->text('description')->nullable();;
+            $table->string('technology')->nullable();
+            $table->string('priority')->nullable();
+            $table->text('attached_files')->nullable();
+            $table->text('description')->nullable();
+            $table->text('status')->nullable();
             $table->timestamps();
         });
     }
