@@ -137,41 +137,19 @@
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach($projects as $project)
                     <tr>
-                      <td>Glofox</td>
-                      <td>Angular</td>
-                      <td>NIRAJ</td>
-                      <td>2022-04-01</td>
-                      <td>2022-05-01</td>
-                      <td>High</td>
+                      <td>{{ $project->project_name }}</td>
+                      <td>{{ $project->technology}}</td>
+                      <td>{{ $project->employee->firstname }}</td>
+                      <td>{{ ($project->start_date != '') ? date('d-m-Y', strtotime($project->start_date) ) : '' }}</td>
+                      <td>{{ ($project->end_date != '') ? date('d-m-Y', strtotime($project->end_date) ) : '' }}</td>
+                      <td>{{ $project->priority }}</td>
                     </tr>
-                    <tr>
-                      <td>Glofox</td>
-                      <td>Angular</td>
-                      <td>NIRAJ</td>
-                      <td>2022-04-01</td>
-                      <td>2022-05-01</td>
-                      <td>High</td>
-                    </tr>
-                    <tr>
-                      <td>Glofox</td>
-                      <td>Angular</td>
-                      <td>NIRAJ</td>
-                      <td>2022-04-01</td>
-                      <td>2022-05-01</td>
-                      <td>High</td>
-                    </tr>
+                    @endforeach
                   </tbody>
                 </table>    
-                <nav aria-label="Page navigation example">
-                  <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                  </ul>
-                </nav> 
+                {{ $projects->links("pagination::bootstrap-4") }}
             </div>
         </div>
         

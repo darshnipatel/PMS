@@ -28,7 +28,11 @@
     <div class="container">
    
       <div class="row">
-
+      @if(session('msg'))
+        <div class="alert alert-primary" role="alert">
+           <strong>{{session('msg')}}</strong>
+        </div>
+      @endif
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         @if ($errors->any())
             <div class="alert alert-danger">

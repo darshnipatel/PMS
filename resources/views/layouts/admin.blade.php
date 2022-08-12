@@ -87,7 +87,7 @@
                   <a class="nav-link" href="{{ route('leave.index')}}">Leave</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="Leave.html">Employees</a>
+                  <a class="nav-link" href="{{ route('getemployees') }}">Employees</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="attendance.html">Attendance</a>

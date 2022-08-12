@@ -15,6 +15,7 @@ return [
     |
     */
     'records_per_page'=>10,
+    
     'name' => env('APP_NAME', 'Laravel'),
 
     /*

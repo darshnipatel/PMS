@@ -14,13 +14,19 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    protected $records_per_page = '';
+
+    public function _construct()
+    {
+        $this->records_per_page = config('app.records_per_page');
+    }
     public function dashboard()
     {
         $employees_count = User::count();
         $project_count = Project::count();
         $clients_count = Client::count();
-        
-        return view('admin.dashboard', compact( 'employees_count' ,'project_count', 'clients_count' ));
+        $projects = Project::paginate($this->records_per_page);
+        return view('admin.dashboard', compact( 'employees_count' ,'project_count', 'clients_count' ,'projects'));
     }
 
     public function get_employees()
